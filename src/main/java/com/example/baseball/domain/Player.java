@@ -1,3 +1,6 @@
+
+//選手の情報を保存するplayerテーブルをつくる
+
 package com.example.baseball.domain;
 
 import javax.persistence.Entity;
@@ -5,10 +8,10 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-@Entity // ①
+@Entity // @EntityをつけることでDBのテーブルと紐づく
 public class Player {
-    @Id // ②
-    @GeneratedValue(strategy = GenerationType.IDENTITY) // ③
+    @Id // @Idをつけた変数がテーブルのプライマーキーになる
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // @GeneratedValueをつけると連番が自動で振られるようになる
     private Long id;
     private String name;
     private Integer age;
